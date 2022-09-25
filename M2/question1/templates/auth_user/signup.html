@@ -1,0 +1,22 @@
+{% extends "common/base.html" %}
+
+{% block content %}
+
+
+<form method="POST">
+    {% csrf_token %}
+    <section class="callout" style="background:linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url(&quot;static/img/bg-callout.jpg&quot;);background-position:center center;background-repeat:no-repeat;background-size:cover;">
+        <div class="container text-center">
+            <h2 class="mx-auto mb-5"><span>Sign Up</span></h2>
+        </div>
+    </section>
+    
+    {{form}}
+    <button class="btn btn-outline-success" type="submit">SIGN UP</button>
+    <p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
+
+
+</form>
+</div>
+
+{% endblock %}

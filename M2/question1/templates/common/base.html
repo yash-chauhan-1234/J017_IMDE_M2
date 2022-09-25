@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>J017 M2 Q1</title>
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic&amp;display=swap">
+    <link rel="stylesheet" href="{% static 'fonts/font-awesome.min.css' %}">
+</head>
+<body id="page-top"><a class="menu-toggle rounded" href="#"><i class="fa fa-bars"></i></a>
+        <nav class="navbar navbar-light navbar-expand" id="sidebar-wrapper">
+            <div class="container"><button data-bs-toggle="collapse" class="navbar-toggler d-none" data-bs-target="#"></button>
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav sidebar-nav" id="sidebar-nav">
+                        <li class="nav-item sidebar-brand"><a class="nav-link active js-scroll-trigger" href="#page-top">To Do</a></li>
+                        <li class="nav-item sidebar-nav-item"><a class="nav-link js-scroll-trigger" href="/">Home</a></li>
+                        <li class="nav-item sidebar-nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'dashboard' %}">Dashboard</a></li>
+                        {% if user.is_authenticated %}
+                        <li class="nav-item sidebar-nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'logout' %}">Logout</a></li>
+
+                        {% else %}
+                        <li class="nav-item sidebar-nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'login' %}">Login</a></li>
+                        <li class="nav-item sidebar-nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'signup' %}">Signup</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    
+    {% block content %}
+
+    {% endblock %}
+    <footer class="footer text-center">
+        <p>Yash Chauhan</p>
+        <p>J017</p>
+        <p>70092000062</p>
+    </footer>
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/stylish-portfolio.js' %}"></script>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+{% extends 'common/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <div class="content-section-heading">
+        <h2 class="mb-5">Update the Task</h2>
+    </div>
+    
+</div>
+<form action="", method="POST">
+    {% csrf_token %}
+    {{form}}
+    <button type="submit">Submit</button>
+</form>
+    
+{% endblock %}

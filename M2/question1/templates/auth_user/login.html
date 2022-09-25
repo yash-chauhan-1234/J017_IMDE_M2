@@ -1,0 +1,32 @@
+{% extends "common/base.html" %}
+{% load static %}
+
+{% block content %}
+
+  <div style="margin-left:50px ;">
+    <br>
+    <section class="callout" style="background:linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url(&quot;static/img/bg-callout.jpg&quot;);background-position:center center;background-repeat:no-repeat;background-size:cover;">
+      <div class="container text-center">
+          <h2 class="mx-auto mb-5"><span>Log In</span></h2>
+      </div>
+  </section>
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Username</label>
+              <input type="text" class="form-control" name="username" aria-describedby="emailHelp" placeholder="Enter Username">
+              
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" name="passw" placeholder="Password">
+            </div>
+           
+        <button class="btn btn-outline-success" type="submit">LOG IN</button>
+        <p>Dont have an account? Create a <a href="{% url 'signup' %}">new account</a></p>
+    </form>
+  </div>
+{% endblock %}

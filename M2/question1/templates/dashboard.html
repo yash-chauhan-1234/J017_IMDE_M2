@@ -1,0 +1,56 @@
+{% extends 'common/base.html' %}
+{% load static %}
+
+{% block content %}
+    <section id="services" class="content-section bg-primary text-white text-center">
+        <div class="container">
+            <div class="content-section-heading">
+                <h2 class="mb-5">Dashboard</h2>
+            </div>
+            <a class="btn btn-dark btn-xl js-scroll-trigger" role="button" href="{% url 'add' %}">Add</a>
+        </div>
+        
+        <section class="vh-100" style="background-color: #eee;">
+            <div class="container py-5 h-100">
+              <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col col-lg-9 col-xl-7">
+                  <div class="card rounded-3">
+                    <div class="card-body p-4">
+                        
+                      <table class="table mb-4">
+                        <thead>
+                          <tr>
+                            <th scope="col">No.</th>
+                            <th scope="col">Todo item</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Actions</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            {% for i in data %}
+                            <th scope="row">{{i.id}}</th>
+                            <td>{{i.title}}</td>
+                            <td>{{i.description}}</td>
+                            <td>
+                              <a href="{% url 'delete' i.id %}"><button class="btn btn-danger">Finshed/Delete</button></a>
+                              <a href="{% url 'update' i.id %}"><button class="btn btn-success ms-1">Update</button></a>
+                            </td>
+                          </tr>
+                          {% endfor %}
+                        </tbody>
+                      </table>
+          
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+
+
+    </section>
+
+
+{% endblock %}

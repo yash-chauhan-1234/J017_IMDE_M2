@@ -1,0 +1,17 @@
+{% extends 'common/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container", style="">
+    <div class="content-section-heading">
+        <h2 class="mb-5">Add a Task</h2>
+    </div>
+    
+</div>
+<form action="{% url 'add' %}", method="POST">
+    {% csrf_token %}
+    {{form}}
+    <button type="submit">Submit</button>
+</form>
+    
+{% endblock %}

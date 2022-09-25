@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<body>
+    There are 3 types of variable declarations <br/>
+     1.let let b=10<br/>
+     2.var var a=10<br/>
+     3.const  const c=20<br/>
+     <br/>
+     Using let or const is preferred since var is a global variable.
+     <br/>
+     Dont use let for reassigning. 
+
+     <br/>   
+
+     <br/>
+     loops
+     1.for loop iterates the elements for the fixed number of times. It should be used if number of iteration is known. The syntax of for loop is given below
+     for (initialization; condition; increment)  
+{  
+    code to be executed  
+}  
+<br/>
+<br/>
+
+<br/>
+2. while loop
+The JavaScript while loop iterates the elements for the infinite number of times. It should be used if number of iteration is not known. The syntax of while loop is given below.
+while (condition)  
+{  <br/>
+    code to be executed  
+    <br/>
+}  
+<br/>
+3.do while loop
+The JavaScript do while loop iterates the elements for the infinite number of times like while loop. But, code is executed at least once whether condition is true or false. The syntax of do while loop is given below.
+<br/>
+<br/>
+
+do{  
+    code to be executed  
+}while (condition);  
+     <br/>
+<script>
+
+let b=10
+ var a=5
+ const c=20
+ document.write(' varaible declarations')
+ document.write("<br>");
+ document.write(' let b \n')
+ document.write(b)
+ document.write("<br>");
+ document.write(' var a \n')
+ document.write(a)
+ document.write("<br>");
+ document.write(' const c \n')
+ document.write(c)
+
+
+ document.write("<br>");
+ document.write("<br>");
+let x = 5;
+let y = 6;
+let z= x+y;
+
+document.write('Addition of 2 sums using simple method is \n')
+console.log(z)
+
+document.write(z)
+document.write("<br>");
+//array function
+  sum = (x1,y1 ) => {
+    return(x1+y1);
+  }
+    x3= sum(4,3)
+    console.log(x3)
+    document.write("<br>");
+   
+    document.write('\n')
+   document.write('Addition of 2 sums using array function\n')
+document.write(x3)
+document.write("<br>");
+
+//decision making 
+
+document.write("<br>");
+document.write("<br>");
+document.write("decision making");
+document.write("<br>");
+document.write("Here if given speed is equal then print speed is equal otherwise print other necessary conditions. <br>");
+document.write("<br>");
+ let speed=10
+ if (speed<9){
+  console.log("Speed of car is less")
+  document.write('Speed of car is less\n')
+} else if(speed ==10){
+  console.log("speed of car  is equal")
+  document.write('speed of car  is equal')
+ } else{
+  console.log('speed of car is greater' )
+  document.write('speed of car is greater')
+ }
+ document.write("<br>");
+ document.write("<br>");
+ 
+
+ if (speed==='10'){
+   console.log("speed of car equal")
+   document.write('speed of car  is equal')
+
+ }  else{
+   console.log('speed  is wrong ')
+   document.write('speed  is wrong')
+ } 
+ document.write("<br>");
+ document.write("<br>");
+ document.write("In this case we are checking if the given variable is string or int by using === we can check for the same. since we given variable is declared as 10 our speed wont be equal.<br> if given variable was declared as'10' then our speed would be equal. In the above explame we are using ==. == is used to check if varaibles are equal. they dont check variable type ")
+
+ //loops 
+ //for loop
+ document.write("<br>");
+ document.write("<br>");
+ document.write('for loop<br>')  
+ for (i=1; i<=10; i++)  
+{  
+
+document.write(i + "<br/>")  
+}  
+
+//while loops
+document.write("<br>");
+ document.write('while loop<br>')
+var i=10;  
+while (i<=15)  
+{  
+document.write(i + "<br/>");  
+i++;  
+}
+
+//do while
+document.write("<br>");
+ document.write('do while loop<br>')
+var i=11;  
+do{  
+document.write(i + "<br/>");  
+i++;  
+}while (i<=15);  
+
+</script>
+
+</body>
+</html>
